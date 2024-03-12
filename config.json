@@ -1,0 +1,20 @@
+{
+    "__comment":"Possible dest_type are: SQL,HTTP",
+    "tables": [
+        {
+    "table_name": ["MARC","MARA"],
+    "source":"EC5",
+    "dest":"local",
+    "dest_type":"SQL",
+    "name_suffix":"V001"
+        }
+        ,
+    {
+    "table_name": ["MARC"],
+    "source":"EC5",
+    "dest":"http-csv",
+    "dest_type":"http",
+    "name_suffix":"V002"
+    }
+        ]
+}
