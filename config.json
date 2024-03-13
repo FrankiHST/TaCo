@@ -16,5 +16,13 @@
     "dest_type":"http",
     "name_suffix":"V002"
     }
+    ,
+    {
+    "table_name": ["MARA"],
+    "source":"EC5",
+    "dest":"http-json",
+    "dest_type":"http",
+    "name_suffix":"V002"
+    }
         ]
 }

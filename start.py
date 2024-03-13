@@ -12,16 +12,23 @@ def read_config(path):
     """
     with open(path,'r',encoding="utf-8") as file:
         obj = json.load(file)
-        print(obj["tables"])
+        #print(len(obj['tables']))
+        print(obj)
+        return(obj)
 
+def single_items(json_string):
+    """
+    This method splits the json in single objects.
+    """
+    string = json_string
+    print(string)
 
 def main():
     """Main method.
     """
     config_path = "./config.json"
-    #print("hello")
-    #print(config_path)
-    read_config(config_path)
+    file = read_config(config_path)
+    single_items(file)
 
 if __name__ == "__main__":
     sys.exit(main())
