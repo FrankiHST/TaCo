@@ -12,15 +12,15 @@ def read_config(path):
     """
     with open(path,'r',encoding="utf-8") as file:
         obj = json.load(file)
-        print(obj)
+        print(obj["tables"])
 
 
 def main():
     """Main method.
     """
     config_path = "./config.json"
-    print("hello")
-    print(config_path)
+    #print("hello")
+    #print(config_path)
     read_config(config_path)
 
 if __name__ == "__main__":
