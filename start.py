@@ -19,10 +19,9 @@ def extraction_data(json_string, extraction_type):
     This method splits the json in single objects.
     """
     number_of_extractiontypes = len(json_string[extraction_type])
-    extractiontype_lines_list=[]
+    extractiontype_lines_list={}
     for x in range(number_of_extractiontypes):
-        extractiontype_line = json_string[extraction_type][x][extraction_type+"_name"]
-        extractiontype_lines_list.append(extractiontype_line)
+        extractiontype_lines_list.update({json_string[extraction_type][x][extraction_type+"_name"][0]:json_string[extraction_type][x]["source"]})
     print(extractiontype_lines_list)
 
 def main():

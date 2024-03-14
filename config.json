@@ -10,7 +10,7 @@
         }
         ,
     {
-    "table_name": ["MARC"],
+    "table_name": ["T001"],
     "source":"EC5",
     "dest":"http-csv",
     "dest_type":"http",
@@ -18,7 +18,7 @@
     }
     ,
     {
-    "table_name": ["MARA"],
+    "table_name": ["ACDOCA"],
     "source":"EC5",
     "dest":"http-json",
     "dest_type":"http",
