@@ -1,6 +1,6 @@
 {
     "__comment":"Possible dest_type are: SQL,HTTP",
-    "tables": [
+    "table": [
         {
     "table_name": ["MARC","MARA"],
     "source":"EC5",
