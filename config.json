@@ -6,7 +6,8 @@
     "source":"EC5",
     "dest":"local",
     "dest_type":"SQL",
-    "name_suffix":"V001"
+    "name_suffix":"V001",
+    "machine":"TPFSCHOCH-2"
         }
         ,
     {
@@ -14,7 +15,8 @@
     "source":"EC5",
     "dest":"http-csv",
     "dest_type":"http",
-    "name_suffix":"V002"
+    "name_suffix":"V002",
+    "machine":"TPFSCHOCH-2"
     }
     ,
     {
@@ -22,7 +24,17 @@
     "source":"EC5",
     "dest":"http-json",
     "dest_type":"http",
-    "name_suffix":"V002"
+    "name_suffix":"V002",
+    "machine":"TPFSCHOCH-2"
     }
+    ,
+    {
+        "table_name": ["MARC","MARA"],
+        "source":"sf",
+        "dest":"local",
+        "dest_type":"SQL",
+        "name_suffix":"V002",
+        "machine":"TPFSCHOCH-2"
+            }
         ]
 }
