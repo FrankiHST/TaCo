@@ -1,34 +1,64 @@
 #!/usr/bin/python
 """
-This program reads a config file.
-After this generates configuration files for Theobald XTract Unsiversal.
+Dieses Programm erstellt aus einer eingelesenen Konfigurationsdatei die Konfigurationsdateien für die Extraktionen
+im XTract Universal von Theobald.
+###https://www.hdm-stuttgart.de/~maucher/Python/html/Klassen.html
+v0.1 einlesen der Konfigurationsdatei
+v0.2 Klasse Extraktion
+v0.3 Klasse ExtraktionGeneral
+v0.4 Klasse ExtraktionDestination 
 """
 import json
 import sys
 
+def __lese_konfiguration__(self, path):
+    with open(path,'r',encoding="utf-8") as file:
+        obj = json.load(file)
+    return obj
+
+def __erstelle_extraktionen__(self):
+    pass
+
 class Extraktion:
     """
     Dies ist die Klasse Extraktion.
-    https://www.hdm-stuttgart.de/~maucher/Python/html/Klassen.html
     Sie entspricht einer konfigurierten Extraktion im XTract Universal.
     """
     angelegteExtraktionen=0
-    def __init__(self,extraktionsnamensuffix="V001",extraktionstyp="table"):
+    def __init__(self,extraktionsname, extraktionsnamensuffix="V001",extraktionstyp="table"):
+        self.__extraktionsname=extraktionsname
         self.__extraktionsnamensuffix=extraktionsnamensuffix
         self.__extraktionstyp=extraktionstyp
         Extraktion.angelegteExtraktionen+=1
 
     def __del__(self):
         Extraktion.angelegteExtraktionen-=1
-
-
-def read_config_to_string(path):
+        
+class ExtraktionGeneral:
     """
-    That´s a method to read the coinfig file. 
+    Dies ist die Klasse ExtraktionGeneral.
+    Diese Klasse entspricht der general.json Konfigurationsdatei einer Extraktion.
     """
-    with open(path,'r',encoding="utf-8") as file:
-        obj = json.load(file)
-        return obj
+    def __init__(self, extraktionstyp, source, destination, destinationtype, tablename):
+        self.__extraktionstyp=extraktionstyp
+        self.__source=source
+        self.__destination=destination
+        self.__destinationstype=destinationtype
+        self.__tablename=tablename
+
+    def __del__(self):
+        pass
+
+class ExtraktionDestination:
+    """
+    Dies ist die Klasse ExtraktionDestination.
+    Diese Klasse entspricht der destination.json Konfigurationsdatei einer Extraktion.
+    """
+    def __init__(self):
+        pass
+    def __del__(self):
+        pass
+
 
 def table_extraction_data(json_string, extraction_type):
     """
