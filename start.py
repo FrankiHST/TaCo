@@ -25,13 +25,13 @@ class Extraktion:
     Sie entspricht einer konfigurierten Extraktion im XTract Universal.
     """
     angelegteExtraktionen=0
-    def __init__(self,extraktionsname, extraktionsnamensuffix="V001",extraktionstyp="table"):
+    def _init_(self,extraktionsname, extraktionsnamensuffix="V001",extraktionstyp="table"):
         self.__extraktionsname=extraktionsname
         self.__extraktionsnamensuffix=extraktionsnamensuffix
         self.__extraktionstyp=extraktionstyp
         Extraktion.angelegteExtraktionen+=1
 
-    def __del__(self):
+    def _del_(self):
         Extraktion.angelegteExtraktionen-=1
         
 class ExtraktionGeneral:
@@ -39,24 +39,18 @@ class ExtraktionGeneral:
     Dies ist die Klasse ExtraktionGeneral.
     Diese Klasse entspricht der general.json Konfigurationsdatei einer Extraktion.
     """
-    def __init__(self, extraktionstyp, source, destination, destinationtype, tablename):
-        self.__extraktionstyp=extraktionstyp
-        self.__source=source
-        self.__destination=destination
-        self.__destinationstype=destinationtype
-        self.__tablename=tablename
-
-    def __del__(self):
-        pass
+    def _init_(self, extraktionstyp, source, destination):
+        self._extraktionstyp=extraktionstyp
+        self._source=source
+        self._destination=destination
 
 class ExtraktionDestination:
     """
     Dies ist die Klasse ExtraktionDestination.
     Diese Klasse entspricht der destination.json Konfigurationsdatei einer Extraktion.
     """
-    def __init__(self):
-        pass
-    def __del__(self):
+    def _init_(self, destinationtype):
+        self._destinationtype=destinationtype
         pass
 
 
