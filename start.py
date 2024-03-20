@@ -10,6 +10,8 @@ v0.4 Klasse ExtraktionDestination
 """
 import json
 import sys
+import configurationClasses
+import extractionClass
 
 def __lese_konfiguration__(self, path):
     with open(path,'r',encoding="utf-8") as file:
@@ -18,41 +20,6 @@ def __lese_konfiguration__(self, path):
 
 def __erstelle_extraktionen__(self):
     pass
-
-class Extraktion:
-    """
-    Dies ist die Klasse Extraktion.
-    Sie entspricht einer konfigurierten Extraktion im XTract Universal.
-    """
-    angelegteExtraktionen=0
-    def _init_(self,extraktionsname, extraktionsnamensuffix="V001",extraktionstyp="table"):
-        self.__extraktionsname=extraktionsname
-        self.__extraktionsnamensuffix=extraktionsnamensuffix
-        self.__extraktionstyp=extraktionstyp
-        Extraktion.angelegteExtraktionen+=1
-
-    def _del_(self):
-        Extraktion.angelegteExtraktionen-=1
-        
-class ExtraktionGeneral:
-    """
-    Dies ist die Klasse ExtraktionGeneral.
-    Diese Klasse entspricht der general.json Konfigurationsdatei einer Extraktion.
-    """
-    def _init_(self, extraktionstyp, source, destination):
-        self._extraktionstyp=extraktionstyp
-        self._source=source
-        self._destination=destination
-
-class ExtraktionDestination:
-    """
-    Dies ist die Klasse ExtraktionDestination.
-    Diese Klasse entspricht der destination.json Konfigurationsdatei einer Extraktion.
-    """
-    def _init_(self, destinationtype):
-        self._destinationtype=destinationtype
-        pass
-
 
 def table_extraction_data(json_string, extraction_type):
     """
