@@ -1,5 +1,7 @@
 {
     "__comment":"Possible dest_type are: SQL,HTTP",
+    "__comment_2":"Possible extractiontypes are: Table",
+    "main_path":"C:\\Program Files\\XtractUniversal",
     "table": [
         {
     "table_name": ["MARC","MARA"],
@@ -29,12 +31,12 @@
     }
     ,
     {
-        "table_name": ["MARC","MARA"],
-        "source":"sf",
-        "dest":"local",
-        "dest_type":"SQL",
-        "name_suffix":"V002",
-        "machine":"TPFSCHOCH-2"
+    "table_name": ["MARC","MARA"],
+    "source":"sf",
+    "dest":"local",
+    "dest_type":"SQL",
+    "name_suffix":"V002",
+    "machine":"TPFSCHOCH-2"
             }
         ]
 }

@@ -50,7 +50,7 @@ def main():
     """
     x_type = "table"
     config_path = "./config.json"
-    x_string = read_config_to_string(config_path)
+    x_string = __lese_konfiguration__("a", config_path)
     table_extraction_data(x_string, x_type)
 
 if __name__ == "__main__":
