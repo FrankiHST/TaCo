@@ -1,3 +1,6 @@
+"""
+Das log module
+"""
 from datetime import datetime
 import getpass
 import platform
@@ -16,7 +19,7 @@ class Log:
         pass
 
     def logging(self, message, ts=log_time, maschine=maschine_name, file=file_name, user=user_name):
-        """_summary_
+        """
         Die logging Funktion, zum übrmitteln von Einträgen an das log
         """
         message_text = "\n"+ts+"\t"+message+"\t"+user+"\t"+maschine+"\t"
