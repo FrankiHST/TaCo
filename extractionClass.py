@@ -1,6 +1,6 @@
-from datetime import datetime
 import subprocess
-import getpass
+from loggingClass import Log
+
 class Extraktion:
     """
     Dies ist die Klasse Extraktion.
@@ -19,19 +19,12 @@ class Extraktion:
         Extraktion.angelegteExtraktionen-=1
 
     def __create_extraction__(self, path, table, source, destination, extraction_type="--table"):
-        log_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        user_name = getpass.getuser()
         try:
             subprocess.run([path, "--extraction",source,destination, extraction_type,table], capture_output=True, check=True)
         except subprocess.CalledProcessError as e:
-            with open(".\\error_output.err", "a", encoding="utf-8") as f:
-                    formatted_e=f"Error message: {e}"
-                    f.write(f"\nTS: {log_time}\t")
-                    f.write(formatted_e+"\t")
-                    f.write("User: "+user_name+"\t")
+            formatted_stderr=f"{e.stderr}"
+            Log.logging("a", formatted_stderr)
             if e.stderr:
-                with open(".\\error_output.err", "a", encoding="utf-8") as f:
-                    formatted_stderr=f"Error message: {e.stderr}"
-                    f.write(f"\nTS: {log_time}\t")
-                    f.write(formatted_stderr+"\t")
-                    f.write("User: "+user_name+"\t")
+                formatted_e=f"{e}"
+                Log.logging("a", formatted_e)
+

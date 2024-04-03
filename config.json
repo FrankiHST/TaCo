@@ -4,7 +4,7 @@
     "main_path":"C:\\Program Files\\XtractUniversal",
     "table": [
         {
-    "table_name": ["MARC","MARA"],
+    "table_name": ["MARC","MARA","MARCH","MARD","MARI","MARM"],
     "source":"EC5",
     "dest":"local",
     "dest_type":"SQL",

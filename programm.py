@@ -1,6 +1,7 @@
 #!/usr/bin/python
 """
-Dieses Programm erstellt aus einer eingelesenen Konfigurationsdatei die Konfigurationsdateien für die Extraktionen
+Dieses Programm erstellt aus einer eingelesenen Konfigurationsdatei 
+die Konfigurationsdateien für die Extraktionen
 im XTract Universal von Theobald.
 """
 import sys
