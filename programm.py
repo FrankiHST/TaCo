@@ -26,7 +26,7 @@ def main():
             i_source=object_json[i_extraction_type][x]["source"]
             i_destination=object_json[i_extraction_type][x]["dest"]
             print(i_table_name, i_source, i_destination)
-            #Extraktion.__create_extraction__("a", i_tool_path, i_table_name, i_source, i_destination)
+            Extraktion.__create_extraction__("a", i_tool_path, i_table_name, i_source, i_destination)
 
 
 if __name__ == "__main__":

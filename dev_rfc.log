@@ -1,0 +1,20 @@
+
+**** Log file opened at 2024-04-03 08:24:23.802680 UTC+02:00 (Mitteleuropäische Zeit), Encoding UTF-8
+NW RFC Library: SDK variant, Release 750 Patch Level 11
+Compilation date          : Jan 14 2023 01:04:49
+CPIC library              : 753.2022.12.23 version 3
+NI library                : 40
+Kernel Release            : 753 Patch Level 1115
+Current working directory : C:\Users\fschoch\OneDrive - SVA System Vertrieb Alexander GmbH\Kundenworkshops\TaCo
+Program                   : xu-config
+Process ID                : 01392
+User                      : fschoch
+Hardware                  : PC with Windows NT 16x AMD64 Level 6 (Mod 154 Step 3)
+Operating_system          : Windows NT 10.0
+Hostname                  : TPFSCHOCH-2
+IP address                : 192.168.178.48
+IPv6 address              : fe80::3d25:3c93:67e5:54e2
+Global trace level        : 0
+
+2024-04-03 08:24:23.790509 [28880] >> Info entry
+	Did not find config file C:\Users\fschoch\OneDrive - SVA System Vertrieb Alexander GmbH\Kundenworkshops\TaCo\sapnwrfc.ini.
