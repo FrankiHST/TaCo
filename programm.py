@@ -7,12 +7,14 @@ im XTract Universal von Theobald.
 import sys
 from extractionClass import Extraktion
 from configurationClasses import ExtraktionGeneral
+from guiClass import FirstWindow
 
 
 
 def main():
     """Main method.
     """
+    FirstWindow.fensterStarten("a")
     i_configtool="\\xu-config.exe"
     i_extraction_type="table"
     i_config_path = "./config.json"
